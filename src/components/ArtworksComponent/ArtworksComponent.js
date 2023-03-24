@@ -4,8 +4,13 @@ import { Card, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getArtworks } from '../../store/art/actions';
 import { Link } from 'react-router-dom';
+import "./artworkscomponent.css";
+
+//swiper:
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 
 const ArtworksComponent = () => {
@@ -17,31 +22,24 @@ const ArtworksComponent = () => {
   }, [])
 
   return (
-    <Container className='col'>
+    <div>
     <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSwiper={(swiper) => console.log(swiper)}>
+      pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper">
       {artworks.map((a) => (
         <SwiperSlide key={a.id}>
         <Link to={`/artwork/${a.id}`}>
-        <img className='card-img-top' width={200} src={a.images.web.url} alt={a.title}/>
+        <div className='BannerHome'>
+        <img className='BannerHomeImg' width={200} src={a.images.web.url} alt={a.title}/>
+        </div>
         </Link>
         </SwiperSlide>
       ))}
     </Swiper>
-
-    {/* <div className='row'>
-      {artworks.map((a) => (
-        <Card className='col-2' key={a.id}>
-        <Link to={`/artwork/${a.id}`}>
-          <img className='card-img-top' width={200} src={a.images.web.url} alt={a.title}/>
-          <Card.Title> {a.title}</Card.Title>
-          </Link>
-        </Card>
-      ))}
-      </div> */}
-    </Container>
+    </div>
   )
 };
 
