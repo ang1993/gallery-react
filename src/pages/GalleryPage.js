@@ -6,9 +6,8 @@ import SelectComponent from "../components/SelectComponent/SelectComponent";
 export default function GalleryPage(){
     return (
         <Container>
-            <h1>Gallery</h1>
+            <h1>Gallery - Browse</h1>
             {/* <SelectComponent></SelectComponent> */}
-            <ArtworksComponent></ArtworksComponent>
             <SearchComponent></SearchComponent>
         </Container>
     )

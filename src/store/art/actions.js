@@ -43,7 +43,7 @@ export function getArtworks(){
     return async(dispatch) => {
         dispatch(actionGetArtworks())
         try {
-            const res = await axios.get(`${apiUrl}/?q=&limit=5`)
+            const res = await axios.get(`${apiUrl}/?q=&limit=6`)
             dispatch(actionGetArtworksOk(res.data.data))
         } catch (error) {
             dispatch(actionGetArtworksFail(error))

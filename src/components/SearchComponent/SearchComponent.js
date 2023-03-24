@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getArtworkSearch } from '../../store/art/actions';
 import ArtReducer from '../../store/art/reducer';
 import { Link } from 'react-router-dom';
+import "./searchcomponent.css";
 
 
 const SearchComponent = () => {
@@ -13,30 +14,39 @@ const SearchComponent = () => {
   const [inputValue, setInputValue] = useState("")
   const {searchResult} = useSelector((state) => state.ArtReducer)
 
+  function search(){
+    dispatch(getArtworkSearch(inputValue))
+    setInputValue("")
+  }
+
   return (
     <Container>
-    <InputGroup className='mb-3' size='lg'>
+    <div className='row gx-5'>
+    <div className='col-4 px-4'>
+    <InputGroup className='mb-3' size='m'>
       <FormControl
       placeholder='Search for Artist'
       type='input'
-      onKeyDown={event => {
-        if(event.key === "Enter"){
-          dispatch(getArtworkSearch(inputValue));
-        }
-      }}
+      onKeyDown={event => {if(event.key === "Enter"){search()}}}
       onChange = {event => setInputValue(event.target.value)}
        />
-      <Button onClick={() => dispatch(getArtworkSearch(inputValue))}>Search</Button>
+      <Button onClick={search}>Search</Button>
     </InputGroup>
-    <Card>
+    </div>
+    <div className='col-8 px-4'>
+    <div className='row g-5'>
       {searchResult.map((obj) => (
+        <Card className='col-4' key={obj.id}>
         <Link to={`/artwork/${obj.id}`}>
         <Card.Title>{obj.title}</Card.Title>
         {/* PROBLEMA AL LEER URL: */}
         {/* <img src={obj.images.web.url} width={200} alt={obj.title} /> */}
         </Link>
+        </Card>
       ))}
-    </Card>
+      </div>
+    </div>
+    </div>
   </Container>
   )
 }
