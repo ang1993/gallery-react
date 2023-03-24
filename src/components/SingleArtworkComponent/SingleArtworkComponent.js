@@ -25,7 +25,7 @@ const SingleArtworkComponent = () => {
         <h3>Descripción:</h3>
         <p> {artwork.wall_description}</p>
         {/* PROBLEMA AL LEER URL: */}
-        {/* <img src={artwork.images.web.url} width="300" alt={artwork.title}/> */}
+        <img src={artwork.images.web.url} width="300" alt={artwork.title}/>
         <h3>Artista:</h3>
         {/* PROBLEMA AL LEER MAP: */}
         {/* {artwork.creators.map((artist) => (
