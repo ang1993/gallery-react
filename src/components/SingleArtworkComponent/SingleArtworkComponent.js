@@ -9,44 +9,40 @@ const SingleArtworkComponent = () => {
 
   const {artwork} = useSelector((state) => state.ArtReducer)
 
+  if(!artwork.id){
+    return (
+      <Container>
+        Cargando...
+      </Container>
+    )
+  } else {
   return (
     <Container>
-        <h2>SingleArtworkComponent</h2>
-        <h3>Título:</h3>
-        {artwork.title}
-        <h3>Fecha de creación:</h3>
-        {artwork.creation_date}
-        <h3>Tipo:</h3>
-        {artwork.collection}
-        <h3>Técnica:</h3>
-        {artwork.technique}
-        <h3>Medidas:</h3>
-        {artwork.measurements}
-        <h3>Descripción:</h3>
+    <div className='row gx-4'>
+    <div className='col-6'>
+    {!artwork.images.web.url ? "" : <img src={artwork.images.web.url} width="100%" alt={artwork.title}/>} 
+    </div>
+    <div className='col-6'>
+        <h3>{artwork.title}</h3>
+        <p>{artwork.creation_date}</p>
+        <p>{artwork.collection}</p>
+        <p>{artwork.technique}</p>
+        <p>{artwork.measurements}</p>
         <p> {artwork.wall_description}</p>
-        {/* PROBLEMA AL LEER URL: */}
-        <img src={artwork.images.web.url} width="300" alt={artwork.title}/>
+        
         <h3>Artista:</h3>
-        {/* PROBLEMA AL LEER MAP: */}
-        {/* {artwork.creators.map((artist) => (
+        {artwork.creators.map((artist) => (
           <div>
             {artist.description}
             {artist.biography}
           </div>
-        ))} */}
-        <h3>Fun Fact:</h3>
+        ))}
         {artwork.fun_fact}
-        <h3>Trabajos relacionados:</h3>
-        {/* PROBLEMA AL LEER MAP: */}
-        {/* {artwork.related_works.map((rw) => (
-          <div>
-            {rw.id}
-            {rw.description}
-          </div> 
-        ))} */}
+        </div>
+      </div>
     </Container>
   )
-}
+} }
 SingleArtworkComponent.propTypes = {};
 
 SingleArtworkComponent.defaultProps = {};

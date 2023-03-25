@@ -12,7 +12,8 @@ const SearchComponent = () => {
 
   const dispatch  = useDispatch();
   const [inputValue, setInputValue] = useState("")
-  const {searchResult} = useSelector((state) => state.ArtReducer)
+  const {searchResult, loadingSearch} = useSelector((state) => state.ArtReducer)
+  
 
   function search(){
     dispatch(getArtworkSearch(inputValue))
@@ -35,14 +36,10 @@ const SearchComponent = () => {
     </div>
     <div className='col-8 px-4'>
     <div className='row g-5'>
-      {searchResult.map((obj) => (
-        <Card className='col-4' key={obj.id}>
-        <Link to={`/artwork/${obj.id}`}>
-        <Card.Title>{obj.title}</Card.Title>
-        {/* PROBLEMA AL LEER URL: */}
-        {/* <img src={obj.images.web.url} width={200} alt={obj.title} /> */}
-        </Link>
-        </Card>
+      {searchResult.map(obj => (
+          <Card className='col-4' key={obj.id}>
+          <Card.Title>{obj.name}</Card.Title>
+          </Card> 
       ))}
       </div>
     </div>

@@ -43,7 +43,7 @@ export function getArtworks(){
     return async(dispatch) => {
         dispatch(actionGetArtworks())
         try {
-            const res = await axios.get(`${apiUrl}/?q=&limit=6`)
+            const res = await axios.get(`${apiUrl}/?q=&limit=8`)
             dispatch(actionGetArtworksOk(res.data.data))
         } catch (error) {
             dispatch(actionGetArtworksFail(error))
@@ -115,7 +115,7 @@ export function getArtworkSearch(searchParam){
     return async(dispatch) => {
         dispatch(actionGetArtworkSearch(searchParam))
         try {
-            const res = await axios.get(`${apiUrl}/?q=${searchParam}=2&limit=10&indent=1`)
+            const res = await axios.get(`https://openaccess-api.clevelandart.org/api/creators/?name=${searchParam}`)
             dispatch(actionGetArtworkSearchOk(res.data.data))
         } catch (error) {
             dispatch(actionGetArtworkSearchFail(error))

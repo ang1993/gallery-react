@@ -11,6 +11,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination } from "swiper";
+import LoremIpsum from 'react-lorem-ipsum';
+import { Button, Container } from 'react-bootstrap';
 
 const ArtworksComponent = () => {
   const dispatch = useDispatch();
@@ -35,7 +37,7 @@ const ArtworksComponent = () => {
       {artworks.map((a) => (
         <SwiperSlide key={a.id}>
         <div className='BannerHome'>
-        <img className='BannerHomeImg' width={200} src={a.images.web.url} alt={a.title}/>
+        <img className='BannerHomeImg' src={a.images.web.url} alt={a.title}/>
         </div>
         </SwiperSlide>
       ))}
