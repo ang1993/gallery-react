@@ -37,9 +37,13 @@ const SearchComponent = () => {
     <div className='col-8 px-4'>
     <div className='row g-5'>
       {searchResult.map(obj => (
+        <Link to={`/artist/${obj.name}`}>
           <Card className='col-4' key={obj.id}>
           <Card.Title>{obj.name}</Card.Title>
+          <p>{obj.nationality}</p>
+          <p>{obj.birth_year} - {obj.death_year}</p>
           </Card> 
+        </Link>
       ))}
       </div>
     </div>

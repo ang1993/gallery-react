@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import SingleArtistPage from './pages/SingleArtistPage';
 import SingleArtworkPage from './pages/SingleArtworkPage';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/browse' element={<GalleryPage/>}></Route>
         <Route exact path='/login' element={<LoginPage/>}></Route>
         <Route exact path='/artwork/:id' element={<SingleArtworkPage/>}></Route>
+        <Route exact path='/artist/:name' element={<SingleArtistPage/>}></Route>
       </Routes>
     </div>
   );

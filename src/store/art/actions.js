@@ -11,7 +11,7 @@ import {
 
     GET_SEARCH,
     GET_SEARCH_OK,
-    GET_SEARCH_FAIL
+    GET_SEARCH_FAIL,
 
 } from './actionTypes'
 
@@ -121,4 +121,4 @@ export function getArtworkSearch(searchParam){
             dispatch(actionGetArtworkSearchFail(error))
         }
     }
-}
+}   
