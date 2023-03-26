@@ -1,14 +1,19 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavComponent from './components/NavComponent/NavComponent'
 import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import UserAreaPage from './pages/UserAreaPage';
 import SingleArtistPage from './pages/SingleArtistPage';
 import SingleArtworkPage from './pages/SingleArtworkPage';
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const {user} = useSelector((state) => state.UserReducer)
+
   return (
     <div className="App">
       <NavComponent></NavComponent>
@@ -17,6 +22,7 @@ function App() {
         <Route exact path='/about' element={<AboutPage/>}></Route>
         <Route exact path='/browse' element={<GalleryPage/>}></Route>
         <Route exact path='/login' element={<LoginPage/>}></Route>
+        <Route exact path='/user-area' element={user && user.id?<UserAreaPage/> : <Navigate to="/login" replace></Navigate>}></Route>
         <Route exact path='/artwork/:id' element={<SingleArtworkPage/>}></Route>
         <Route exact path='/artist/:name' element={<SingleArtistPage/>}></Route>
       </Routes>

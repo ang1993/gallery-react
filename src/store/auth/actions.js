@@ -31,8 +31,8 @@ export function doLogin(dataUser){
     return async(dispatch) => {
         dispatch(actionDoLogin(dataUser))
         try {
-            const res = await axios.post("");
-            dispatch(actionDoLoginOk())
+            const res = await axios.post("https://dummyjson.com/auth/login", dataUser);
+            dispatch(actionDoLoginOk(res.data))
         } catch (error) {
             dispatch(actionDoLoginFail(error))
         }
