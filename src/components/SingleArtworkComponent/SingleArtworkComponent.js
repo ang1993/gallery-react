@@ -6,27 +6,27 @@ import ArtReducer from '../../store/art/reducer';
 
 const SingleArtworkComponent = () => {
 
-  const {artwork, loadingArtwork} = useSelector((state) => state.ArtReducer)
+  const {singleArtwork, loadingSingleArtwork} = useSelector((state) => state.ArtReducer)
 
-  if(!loadingArtwork){
-    
+  if(loadingSingleArtwork){
+    return ("")
   } 
 
   return (
     <Container>
     <div className='row gx-4'>
     <div className='col-6'>
-    {artwork.images.web.url ? <img src={artwork.images.web.url} width={"500"} alt={artwork.title}/> : "!"}
+    {/* <img src={singleArtwork?.images.web.url} width={"500"} alt={singleArtwork.title}/> */}
     </div>
     <div className='col-6'>
-        <h3>{artwork.title}</h3>
-        <p>{artwork.creation_date}</p>
-        <p>{artwork.collection}</p>
-        <p>{artwork.technique}</p>
-        <p>{artwork.measurements}</p>
-        <p> {artwork.wall_description}</p>
+        <h3>{singleArtwork.title}</h3>
+        <p>{singleArtwork.creation_date}</p>
+        <p>{singleArtwork.collection}</p>
+        <p>{singleArtwork.technique}</p>
+        <p>{singleArtwork.measurements}</p>
+        <p> {singleArtwork.wall_description}</p>
         <h3>Artist:</h3>
-        {artwork.creators.map((artist) => (
+        {singleArtwork.creators?.map((artist) => (
           <div>
             {artist.description}
             <h5>Bio:</h5>
@@ -34,7 +34,7 @@ const SingleArtworkComponent = () => {
           </div>
         ))}
         <h3>Fun fact:</h3>
-        {artwork.fun_fact}
+        {singleArtwork.fun_fact}
         </div>
       </div>
     </Container>

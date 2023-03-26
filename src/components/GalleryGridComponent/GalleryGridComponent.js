@@ -6,7 +6,7 @@ import { getArtworks } from '../../store/art/actions';
 import "./gallerygrid.css"
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-
+import ArtReducer from '../../store/art/reducer';
 
 const GalleryGridComponent = () => {
 
@@ -18,18 +18,14 @@ const GalleryGridComponent = () => {
   }, [])
 
 
-  if(loadingArtworks){
-    return (
-      <div>
-        vamos a ver
-      </div>
-    )
+  if(!artworks){
+    return null
   }
   return(
     <div className='GalleryGridBox'>
     <Container>
     <div className='galleryGrid'>
-      {artworks.slice(0,12).map((art, index) => (
+      {artworks?.slice(8,12).map((art, index) => (
         <Link className='galleryLink' to={`/artwork/${art.id}`}>
             <img className="galleryImage" src={art.images.web.url} alt={art.title} />
         </Link>

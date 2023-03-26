@@ -7,8 +7,9 @@
 
 .searcher-card {
     padding: 20px;
-    border: 1px solid black;
     color: black;
+    background-color: pink;
+    border-radius: 10px;
     text-decoration: none;
     width: 240px;
     height: 240px;

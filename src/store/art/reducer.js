@@ -21,8 +21,8 @@ import {
 const initialState = {
     artworks: [],
     loadingArtworks: false,
-    artwork: {},
-    loadingArtwork: false,
+    singleArtwork: {},
+    loadingSingleArtwork: false,
     searchResult: [],
     loadingSearch: false,
     femaleArtworks: [],
@@ -47,10 +47,10 @@ export default function ArtReducer(state = initialState, action) {
             state = {...state, loadingArtwork:true}
             break;
         case GET_SINGLE_ARTWORK_OK:
-            state = {...state, artwork: action.payload, loadingArtwork:false}
+            state = {...state, singleArtwork: action.payload, loadingSingleArtwork:false}
             break;
         case GET_SINGLE_ARTWORK_FAIL:
-            state = {...state, artwork:{}, loadingArtwork:false, error:{message: action.payload}}
+            state = {...state, singleArtwork:{}, loadingSingleArtwork:false, error:{message: action.payload}}
             break;
         case GET_SEARCH:
             state = {...state, loadingSearch:true}
