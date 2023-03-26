@@ -1,11 +1,23 @@
 import {
     LOGIN,
     LOGIN_OK,
-    LOGIN_FAIL
+    LOGIN_FAIL,
+
+    DO_LOGUT,
+    DO_LOGUT_OK,
+
 } from './actionTypes'
 
+function recoverUser(){
+    try{
+        return JSON.parse(localStorage.getItem("_user"))
+    } catch(fail){
+        return {}
+    }
+}
+
 const initialState = {
-    user: {},
+    user: recoverUser(),
     loadingUser: false,
     error: {
         message: ""
@@ -22,6 +34,12 @@ export default function UserReducer(state = initialState, action) {
             break;
         case LOGIN_FAIL:
             state = {...state, loadingUser: false, user: {}, error:{message: action.payload}}
+            break;
+        case DO_LOGUT:
+            state = {...state}
+            break;
+        case DO_LOGUT_OK:
+            state = {...state, user: {}}
             break;
         default:
             break;
