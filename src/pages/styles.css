@@ -1,5 +1,26 @@
+* {
+    color: #13130D;
+}
+
+.HomePageBox, .BrowsePageBox, .AboutPageBox {
+    background-color: #EEEDE0;
+}
+
+.GalleryGridBox, .GalleryPageBox {
+    background-color: #13130D;
+}
+
+.FeaturedArtworksBox {
+    background-color: #F7F6EC;
+    border-radius: 15px;
+}
+
 h1 {
     padding: 20px 0;
+}
+
+.light-text {
+    color: #EEEDE0;
 }
 
 .H1RegularText {
@@ -14,14 +35,14 @@ h1 {
 }
 
 .BiggerP {
-    border-top: 1px solid black;
     padding: 20px 0 0 0;
 }
 
 .H3RegularText {
-    font-family: 'Playfair Display', serif;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
 }
 
 .RandomImgBox {
@@ -32,4 +53,14 @@ h1 {
 
 .italic {
     font-style: italic;
+}
+
+.CardImageBox {
+    width: 100%;
+}
+
+.CardImage {
+    object-fit: cover;
+    width: 370px;
+    height: 250px;
 }

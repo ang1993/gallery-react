@@ -1,12 +1,12 @@
 .BannerHome {
     width: 100%;
-    height: 500px;
+    height: 60vh;
 }
 
 .BannerHomeImg {
     width: 100%;
     position: relative;
-    top: -130px;
+    top: 0px;
     animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 

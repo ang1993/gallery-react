@@ -1,20 +1,7 @@
+.NavBarBox {
+    background-color: #13130D;
+}
+
 .nav-link {
-    position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    opacity: 0;
-    transition: all 0.2s;
-    height: 2px;
-    width: 100%;
-    background-color: brown;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.nav-link:hover::after {
-    content: '';
-    opacity: 1;
+    color: #EEEDE0 !important;
 }

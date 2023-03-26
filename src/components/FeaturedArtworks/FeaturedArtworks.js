@@ -3,34 +3,57 @@ import PropTypes from 'prop-types';
 import { Button, Container } from 'react-bootstrap';
 import { LoremIpsum } from "react-lorem-ipsum";
 import { useDispatch, useSelector } from 'react-redux';
-import { getFemaleArtworks } from '../../store/art/actions';
+import { getArtworks } from '../../store/art/actions';
 import "../../pages/styles.css"
+import { Link } from 'react-router-dom';
 
 
 const FeaturedArtworks = () => {
 
+  const dispatch = useDispatch()
+  const {artworks, loadingArtworks} = useSelector((state) => state.ArtReducer)
+
+  useEffect( () => {
+    dispatch(getArtworks())
+  }, [])
+
+  if(loadingArtworks){
+    return (
+      <div>
+        cargando
+      </div>
+    )
+  }
 
   return (
     <Container>
+    <div className='FeaturedArtworksBox'>
       <div className="row p-4">
-          <div className="col-md-12 ">
+          <div className="col-md-10">
             <h3 className="H3RegularText">What's new?</h3>
           </div>
-          <div class="col-md-12 d-flex align-items-center">
+          <div class="col-md-10 d-flex align-items-center">
             <p className="BiggerP"><LoremIpsum avgWordsPerSentence={8}/></p>
           </div>
-          </div>
-      <section className='row p-4'>
-      <div className="col-md-6">
           <div>
-          <div className="RandomImgBox"></div>
+            <Link>Take a look</Link>
           </div>
-            <span>New Collection</span>
-            <h4 className="H3RegularText">Random</h4>
-            <p><LoremIpsum avgWordsPerSentence={4}/></p>
+      </div>
+      <section className='row p-4'>
+      {artworks.slice(8,11).map((artwk) => (
+        <div className="col-md-4 CardBox">
+          <div className='CardImageBox'>
+          <img className='CardImage' src={artwk.images.web.url} alt={artwk.title} />
+          </div>
+          <span> {artwk.department} </span>
+            <h5>{artwk.title}</h5>
+            <p>{artwk.creators[0].description}</p>
+            <p>{artwk.technique}</p>
             <Button>Explore</Button>
       </div>
+      ))}
       </section>
+      </div>
     </Container>
   )
 }

@@ -4,14 +4,14 @@ import ArtworksComponent from '../components/ArtworksComponent/ArtworksComponent
 import SearchComponent from "../components/SearchComponent/SearchComponent";
 import "./styles.css"
 
-export default function GalleryPage(){
+export default function BrowsePage(){
 
     const {searchResult} = useSelector((state) => state.ArtReducer)
 
     return (
-        <Container>            
-            {/* <SelectComponent></SelectComponent> */}
-            {searchResult ? <SearchComponent></SearchComponent> : ""} 
+        <Container>
+        Browse page
+          {searchResult ? <SearchComponent></SearchComponent> : ""} 
         </Container>
     )
 }
