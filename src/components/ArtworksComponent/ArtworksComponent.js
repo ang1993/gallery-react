@@ -11,16 +11,25 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination } from "swiper";
-import LoremIpsum from 'react-lorem-ipsum';
-import { Button, Container } from 'react-bootstrap';
+
 
 const ArtworksComponent = () => {
   const dispatch = useDispatch();
-  const {artworks} = useSelector((state) => state.ArtReducer)
+  const {artworks, loadingArtworks} = useSelector((state) => state.ArtReducer)
 
   useEffect( () => {
     dispatch(getArtworks())
   }, [])
+
+//funciona ok:
+
+  if(loadingArtworks){
+    return (
+      <div>
+        vamos a ver
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -34,7 +43,7 @@ const ArtworksComponent = () => {
         modules={[EffectFade, Navigation, Pagination]}
         className="mySwiper"
       >
-      {artworks.map((a) => (
+      {artworks.slice(2,5).map((a) => (
         <SwiperSlide key={a.id}>
         <div className='BannerHome'>
         <img className='BannerHomeImg' src={a.images.web.url} alt={a.title}/>

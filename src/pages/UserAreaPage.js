@@ -18,10 +18,10 @@ export default function UserAreaPage(){
             <h4>Welcome {user.username}</h4>
             <Form>
                 <FormGroup>
-                    <label>Nombre: </label> {user.username}
+                    <label>Nombre: </label> {user.firstName}
                 </FormGroup>
                 <FormGroup>
-                    <label>Apellidos: </label> {user.lastname}
+                    <label>Apellidos: </label> {user.lastName}
                 </FormGroup>
                 <FormGroup>
                     <label>Email: </label> {user.email}

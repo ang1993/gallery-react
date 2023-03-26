@@ -2,7 +2,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavComponent from './components/NavComponent/NavComponent'
 import AboutPage from './pages/AboutPage';
-import GalleryPage from './pages/GalleryPage';
+import CollectionPage from './pages/CollectionPage';
+import BrowsePage from './pages/BrowsePage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import UserAreaPage from './pages/UserAreaPage';
@@ -20,7 +21,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage/>}></Route>
         <Route exact path='/about' element={<AboutPage/>}></Route>
-        <Route exact path='/browse' element={<GalleryPage/>}></Route>
+        <Route exact path='/collection' element={<CollectionPage/>}></Route>
+        <Route exact path='/browse' element={<BrowsePage/>}></Route>
         <Route exact path='/login' element={<LoginPage/>}></Route>
         <Route exact path='/user-area' element={user && user.id?<UserAreaPage/> : <Navigate to="/login" replace></Navigate>}></Route>
         <Route exact path='/artwork/:id' element={<SingleArtworkPage/>}></Route>
