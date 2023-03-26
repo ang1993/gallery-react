@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import "../../pages/styles.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { getArtworks } from '../../store/art/actions';
+import "./gallerygrid.css"
+import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 
 const GalleryGridComponent = () => {
@@ -14,6 +17,7 @@ const GalleryGridComponent = () => {
     dispatch(getArtworks())
   }, [])
 
+
   if(loadingArtworks){
     return (
       <div>
@@ -21,15 +25,17 @@ const GalleryGridComponent = () => {
       </div>
     )
   }
-
-
   return(
     <div className='GalleryGridBox'>
-      {artworks.slice(10,13).map((art) => (
-          <div>
-            <img src={art.images.web.url} alt={art.title} />
-          </div>
+    <Container>
+    <div className='galleryGrid'>
+      {artworks.slice(0,12).map((art, index) => (
+        <Link className='galleryLink' to={`/artwork/${art.id}`}>
+            <img className="galleryImage" src={art.images.web.url} alt={art.title} />
+        </Link>
         ))}
+    </div>
+    </Container>
     </div>
   )
 }

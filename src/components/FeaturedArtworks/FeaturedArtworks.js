@@ -49,7 +49,7 @@ const FeaturedArtworks = () => {
             <h5>{artwk.title}</h5>
             <p>{artwk.creators[0].description}</p>
             <p>{artwk.technique}</p>
-            <Button>Explore</Button>
+            <Link to={`/artwork/${artwk.id}`}><Button>View</Button></Link>
       </div>
       ))}
       </section>

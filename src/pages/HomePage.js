@@ -18,7 +18,7 @@ export default function HomePage(){
         <section className="container">
             <div className="row p-4">
                 <div className="col-md-6">
-                    <h1 className="H1RegularText">Believers &<span className="H1ItalicText">Humanity.</span></h1>
+                    <h1 className="H1RegularText">Cansada &<span className="H1ItalicText">Harta.</span></h1>
                 </div>
             <div class="col-md-6 flex align-self-center">
                 <Link>Try browse</Link>

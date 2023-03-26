@@ -5,10 +5,6 @@ import { Link } from 'react-router-dom';
 import "./navcomponent.css";
 import { useSelector } from 'react-redux';
 
-
-
-
-
 const NavComponent = () => {
   const {user} = useSelector((state) => state.UserReducer)
 
