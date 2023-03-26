@@ -25,9 +25,9 @@ const GalleryGridComponent = () => {
     <div className='GalleryGridBox'>
     <Container>
     <div className='galleryGrid'>
-      {artworks?.slice(8,12).map((art, index) => (
+      {artworks.map((art, index) => (
         <Link className='galleryLink' to={`/artwork/${art.id}`}>
-            <img className="galleryImage" src={art.images.web.url} alt={art.title} />
+            {art.images.web ? <img className="galleryImage" src={art.images.web.url} alt={art.title} /> : ""}
         </Link>
         ))}
     </div>
