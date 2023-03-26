@@ -1,9 +1,17 @@
 import { Container, Form, FormGroup, Image } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { doLogout } from "../store/auth/actions";
 
 export default function UserAreaPage(){
 
     const {user} = useSelector((state) => state.UserReducer)
+    const dispatch = useDispatch()
+
+    function logOut(){
+      dispatch(doLogout())
+    }
+  
 
     return (
         <Container>
@@ -21,6 +29,7 @@ export default function UserAreaPage(){
             </Form>
 
             <Image src= {user.image}></Image>
+            <Link onClick={logOut}>Logout</Link>
 
         </Container>
     )

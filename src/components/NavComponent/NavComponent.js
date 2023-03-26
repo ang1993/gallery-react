@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useDebugValue } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./navcomponent.css";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { doLogout } from '../../store/auth/actions';
 
 
 const NavComponent = () => {
   const {user} = useSelector((state) => state.UserReducer)
+
   return (
     <Navbar bg="light" variant="light">
       <Container>
