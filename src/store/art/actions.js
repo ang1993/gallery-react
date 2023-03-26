@@ -13,6 +13,10 @@ import {
     GET_SEARCH_OK,
     GET_SEARCH_FAIL,
 
+    GET_FEMALE_ARTWORK,
+    GET_FEMALE_ARTWORK_OK,
+    GET_FEMALE_ARTWORK_FAIL
+
 } from './actionTypes'
 
 const apiUrl = "https://openaccess-api.clevelandart.org/api/artworks"
@@ -122,3 +126,37 @@ export function getArtworkSearch(searchParam){
         }
     }
 }   
+
+//GET ARTWORKS:
+
+export function actionGetFemaleArtworks(){
+    return {
+        type: GET_FEMALE_ARTWORK
+    }
+}
+
+export function actionGetFemaleArtworksOk(femArtworks){
+    return {
+        type: GET_FEMALE_ARTWORK_OK,
+        payload: femArtworks
+    }
+}
+
+export function actionGetFemaleArtworksFail(error){
+    return {
+        type: GET_FEMALE_ARTWORK_FAIL,
+        payload: error
+    }
+}
+
+export function getFemaleArtworks(){
+    return async(dispatch) => {
+        dispatch(actionGetFemaleArtworks())
+        try {
+            const res = await axios.get(`https://openaccess-api.clevelandart.org/api/artworks/?female_artists&recently_acquired&created_before_age=25`)
+            dispatch(actionGetFemaleArtworksOk(res.data.data))
+        } catch (error) {
+            dispatch(actionGetFemaleArtworksFail(error))
+        }
+    }
+}

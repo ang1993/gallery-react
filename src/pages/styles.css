@@ -29,3 +29,7 @@ h1 {
     width: 100%;
     height: 250px;
 }
+
+.italic {
+    font-style: italic;
+}

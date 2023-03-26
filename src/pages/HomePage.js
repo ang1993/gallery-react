@@ -18,32 +18,6 @@ export default function HomePage(){
         </section>
         <ArtworksComponent></ArtworksComponent>
         <FeaturedArtworks></FeaturedArtworks>
-        {/* <section className="container">
-            <div className="row p-4">
-                <div className="col-md-12 ">
-                    <h3 className="H3RegularText">What's new?</h3>
-                </div>
-            <div class="col-md-12 d-flex align-items-center">
-                    <p className="BiggerP"><LoremIpsum avgWordsPerSentence={8}/></p>
-                </div>
-            </div>
-            <div className="row p-4">
-                <div className="col-md-6">
-                    <div className="RandomImgBox"></div>
-                    <span>New Collection</span>
-                    <h4 className="H3RegularText">Art by Random</h4>
-                    <p><LoremIpsum avgWordsPerSentence={4}/></p>
-                    <Button>Explore</Button>
-                </div>
-                <div class="col-md-6">
-                    <div className="RandomImgBox"></div>
-                    <span>New Collection</span>
-                    <h4 className="H3RegularText">Art by Random</h4>
-                    <p><LoremIpsum avgWordsPerSentence={4}/></p>
-                    <Button>Explore</Button>
-                </div>
-            </div>
-        </section> */}
         </Container>
     )
 }

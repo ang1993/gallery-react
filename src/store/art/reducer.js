@@ -10,7 +10,11 @@ import {
 
     GET_SEARCH,
     GET_SEARCH_OK,
-    GET_SEARCH_FAIL
+    GET_SEARCH_FAIL,
+    
+    GET_FEMALE_ARTWORK,
+    GET_FEMALE_ARTWORK_OK,
+    GET_FEMALE_ARTWORK_FAIL
 
 } from './actionTypes'
 
@@ -21,6 +25,8 @@ const initialState = {
     loadingArtwork: false,
     searchResult: [],
     loadingSearch: false,
+    femaleArtworks: [],
+    loadingFemArt: false,
     error: {
         message: ""
     }
@@ -54,6 +60,15 @@ export default function ArtReducer(state = initialState, action) {
             break;
         case GET_SEARCH_FAIL:
             state = {...state, searchResult:[], loadingSearch:false, error:{message: action.payload}}
+            break;
+        case GET_FEMALE_ARTWORK:
+            state = {...state, loadingFemArt:true}
+            break;
+        case GET_FEMALE_ARTWORK_OK:
+            state = {...state, femaleArtworks: action.payload, loadingFemArt: false}
+            break;
+        case GET_FEMALE_ARTWORK_FAIL:
+            state = {...state, femaleArtworks:[], loadingFemArt:false, error:{message: action.payload}}
             break;
         default:
             break;
