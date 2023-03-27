@@ -31,7 +31,7 @@ const LoginComponent = () => {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in enim nisl. Donec quis felis et ligula ornare auctor. </p>
         <fieldset>
           <label for="username">Username:</label>
-          <input  id="username" value={username} onChange={(e)=> setUserName(e.target.value)} placeholder="username" type="text"></input>
+          <input className='formInput' id="username" value={username} onChange={(e)=> setUserName(e.target.value)} placeholder="username" type="text"></input>
         </fieldset>
         <fieldset>
         <label for="password">Password:</label>

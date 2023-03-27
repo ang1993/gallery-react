@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import ArtReducer from '../../store/art/reducer';
 
+
 const GalleryGridComponent = () => {
 
   const dispatch = useDispatch()
@@ -25,7 +26,7 @@ const GalleryGridComponent = () => {
     <div className='GalleryGridBox'>
     <Container>
     <div className='galleryGrid'>
-      <div className='galleryRow'>
+        <div className='galleryRow'>
         <div className='galleryCol'>
         {artworks.slice(0,10).map((art, index) => (
           <Link className='galleryLink' to={`/artwork/${art.id}`}>
@@ -35,9 +36,11 @@ const GalleryGridComponent = () => {
           </div>
           <div className='galleryCol'>
         {artworks.slice(11,23).map((art, index) => (
-          <Link className='galleryLink' to={`/artwork/${art.id}`}>
-              {art.images.web ? <img className="galleryImage" src={art.images.web.url} alt={art.title} /> : ""}
-          </Link>
+          <div className='galleryItem'>
+            <Link className='galleryLink' to={`/artwork/${art.id}`}>
+                {art.images.web ? <img className="galleryImage" src={art.images.web.url} alt={art.title} /> : ""}
+            </Link>
+          </div>
           ))}
           </div>
           <div className='galleryCol'>

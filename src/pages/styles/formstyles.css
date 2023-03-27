@@ -1,0 +1,28 @@
+/* FORM STYLES */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 15px 0 10px 0;
+    font-weight: bolder;
+}
+
+.formInput {
+    width: 250px;
+    letter-spacing: .05em;
+	overflow: hidden;
+    font-size:0.9rem;
+	padding: 0.5rem;
+    border-radius: 7px;
+    border-color: rgba(161, 161, 161, 0.2);
+    margin: 10px 0;
+    background-color: #F7F6EC;
+}
+
+.formInput:focus {
+    outline-style: #e65970;
+}
+

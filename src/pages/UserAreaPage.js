@@ -2,7 +2,8 @@ import { Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { doLogout } from "../store/auth/actions";
-import "./styles/userstyles.css"
+import "./styles/styles.css"
+
 
 export default function UserAreaPage(){
 

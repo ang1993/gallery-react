@@ -1,3 +1,10 @@
+@import url("./userstyles.css");
+@import url("./formstyles.css");
+@import url("./animations.css");
+@import url("./buttons.css");
+@import url("../../index.css");
+@import url("../../App.css");
+
 * {
     color: #13130D;
 }
@@ -8,6 +15,10 @@
 
 .GalleryGridBox, .GalleryPageBox, .FooterComponentBox, .CollectionPageBox {
     background-color: #13130D;
+}
+
+.PageHeader {
+    padding: 50px 50px 0 50px;
 }
 
 .FeaturedArtworksBox {
@@ -39,9 +50,6 @@ h1 {
 }
 
 .H3RegularText {
-    font-weight: 600;
-    font-size: 2rem;
-    margin-top: 1.5rem;
     margin-bottom: 0;
 }
 

@@ -1,8 +1,12 @@
+html {
+  background-color: #EEEDE0;
+}
+
 body {
   margin: 0;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #EEEDE0;
+
 }
 
