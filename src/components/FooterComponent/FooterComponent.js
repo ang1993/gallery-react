@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const FooterComponent = () => (
-  <div>
+  <div className='FooterComponentBox'>
     FooterComponent Component
   </div>
 );

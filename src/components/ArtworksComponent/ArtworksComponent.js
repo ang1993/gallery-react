@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { EffectFade, Navigation, Pagination } from "swiper";
+import { EffectFade, Autoplay,  Navigation, Pagination } from "swiper";
 
 
 const ArtworksComponent = () => {
@@ -36,14 +36,19 @@ const ArtworksComponent = () => {
     <Swiper
         spaceBetween={30}
         effect={"fade"}
-        navigation={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        navigation={false}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-      {artworks.slice(2,5).map((a) => (
+      {artworks.slice(2,6).map((a) => (
         <SwiperSlide key={a.id}>
         <div className='BannerHome'>
         <img className='BannerHomeImg' src={a.images.web.url} alt={a.title}/>

@@ -10,6 +10,7 @@ import UserAreaPage from './pages/UserAreaPage';
 import SingleArtistPage from './pages/SingleArtistPage';
 import SingleArtworkPage from './pages/SingleArtworkPage';
 import { useSelector } from 'react-redux';
+import FooterComponent from './components/FooterComponent/FooterComponent';
 
 function App() {
 

@@ -6,7 +6,7 @@
     background-color: #EEEDE0;
 }
 
-.GalleryGridBox, .GalleryPageBox {
+.GalleryGridBox, .GalleryPageBox, .FooterComponentBox, .CollectionPageBox {
     background-color: #13130D;
 }
 
@@ -64,3 +64,4 @@ h1 {
     width: 370px;
     height: 250px;
 }
+

@@ -6,8 +6,7 @@ import { getArtworkSearch } from '../../store/art/actions';
 import ArtReducer from '../../store/art/reducer';
 import { Link } from 'react-router-dom';
 import "./searchcomponent.css";
-import "../../pages/styles.css"
-import LoremIpsum from 'react-lorem-ipsum';
+import "../../pages/styles/styles.css"
 
 
 const SearchComponent = () => {

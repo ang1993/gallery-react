@@ -3,8 +3,7 @@ import GalleryGridComponent from "../components/GalleryGridComponent/GalleryGrid
 export default function CollectionPage() {
 
     return(
-        <div>
-            collection page
+        <div className="CollectionPageBox">
             <GalleryGridComponent></GalleryGridComponent>
         </div>
     )

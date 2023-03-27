@@ -4,7 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 import { LoremIpsum } from "react-lorem-ipsum";
 import { useDispatch, useSelector } from 'react-redux';
 import { getArtworks } from '../../store/art/actions';
-import "../../pages/styles.css"
+import "../../pages/styles/styles.css"
 import { Link } from 'react-router-dom';
 
 

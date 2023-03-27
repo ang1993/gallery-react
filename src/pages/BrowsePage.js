@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import ArtworksComponent from '../components/ArtworksComponent/ArtworksComponent'
 import SearchComponent from "../components/SearchComponent/SearchComponent";
-import "./styles.css"
+import "./styles/styles.css"
 
 export default function BrowsePage(){
 

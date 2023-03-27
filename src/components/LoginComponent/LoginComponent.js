@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { doLogin } from '../../store/auth/actions';
 import { Button, Container, Form, FormGroup, FormLabel } from 'react-bootstrap';
 
@@ -26,17 +26,19 @@ const LoginComponent = () => {
 
   return (
     <Container>
-      <Form>
-        <FormGroup>
-          <FormLabel>Username</FormLabel>
-          <input value={username} onChange={(e)=> setUserName(e.target.value)} placeholder="username" type="text"></input>
-        </FormGroup>
-        <FormGroup>
-        <FormLabel>Password</FormLabel>
-        <input value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="password" type="password"></input>
-      </FormGroup>
-      <Button onClick={submitLogin}>Login</Button>
-      </Form>
+      <form>
+      <h4>Hi there!</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in enim nisl. Donec quis felis et ligula ornare auctor. </p>
+        <fieldset>
+          <label for="username">Username:</label>
+          <input  id="username" value={username} onChange={(e)=> setUserName(e.target.value)} placeholder="username" type="text"></input>
+        </fieldset>
+        <fieldset>
+        <label for="password">Password:</label>
+        <input id="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="password" type="password"></input>
+      </fieldset>
+      <Link className='PrimaryButton' onClick={submitLogin}>Login</Link>
+      </form>
     </Container>
   )
 }
