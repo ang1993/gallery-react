@@ -1,0 +1,25 @@
+.ArtistCompBox {
+    padding: 80px 50px;
+}
+.ArtworkPreviewBox {
+    padding: 20px 0;
+    border-top: 1px solid black;
+}
+
+.ArtworkTitleList {
+    padding: 10px 0 0 0;
+}
+
+.ArtworkTombstoneList {
+    margin-bottom: 0;
+    padding: 0 0 10px 0;
+    font-style: italic;
+}
+
+.birthDead {
+    margin-bottom: 20px;
+}
+
+.artistNation {
+    margin-bottom: 10px;
+}

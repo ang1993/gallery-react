@@ -1,27 +1,31 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import ArtReducer from '../../store/art/reducer';
 import { Link } from 'react-router-dom';
+import "./artistcomponent.css";
+import "../../pages/styles/styles.css"
 
 
 const ArtistComponent = () => {
   const {searchResult} = useSelector((state) => state.ArtReducer)
 
   return(
+    <div className='ArtistCompBox'>
     <Container>
-      <h3>{searchResult[0].name}</h3>
-      <p>{searchResult[0].nationality}</p>
-      <p>{searchResult[0].birth_year} - {searchResult[0].death_year} </p>
+      <h3 className='H3RegularText'>{searchResult[0].name}</h3>
+      <p className='artistNation'>{searchResult[0].nationality}</p>
+      <p className='birthDead'>{searchResult[0].birth_year} - {searchResult[0].death_year} </p>
       {searchResult[0].artworks.map((artwork) => (
-          <div>
-            {artwork.title}
-            {artwork.tombstone}
-            <Link to={`/artwork/${artwork.id}`}><Button>View</Button></Link>
+          <div className='ArtworkPreviewBox'>
+            <h6 className='ArtworkTitleList'>{artwork.title}</h6>
+            <p className='ArtworkTombstoneList'>{artwork.tombstone}</p>
+            <Link to={`/artwork/${artwork.id}`} className='ScndButton'>View</Link>
           </div>
         ))}
     </Container>
+    </div>
   ) 
 };
 
