@@ -39,7 +39,7 @@ const SearchComponent = () => {
        />
       <Link className='PrimaryButton' onClick={search}>Browse</Link>
     </div>
-    <div>
+    <div className='searchResultBox'>
     <div className='searchResultGrid'>
       {searchResult.map(obj => (
         <Link className='cardArtistLink' to={`/artist/${obj.name}`}>
