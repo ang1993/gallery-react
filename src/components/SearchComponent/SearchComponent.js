@@ -20,6 +20,8 @@ const SearchComponent = () => {
     setInputValue("")
   }
 
+
+
   if(searchResult === []) {
     return (
       console.log("nothingFound")

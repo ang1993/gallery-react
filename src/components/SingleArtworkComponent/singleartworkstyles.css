@@ -1,3 +1,64 @@
-.simplebar-scrollbar::before {
-    background-color: red;
-  }
+.myRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.myColArt {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: left;
+  justify-content: space-around;
+  animation: entrance-opacity 0.9s 0.4s both;
+}
+
+.artworkImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artworkImageContainer img {
+  max-height: 490px;
+  object-fit: contain;
+  animation: entrance-opacity 0.9s 0.6s both;
+}
+
+.artworkInfoContainer {
+  background-color: #F7F6EC;
+  box-shadow: 1px 2px 17px 0px rgba(168,168,168,0.2);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.labelInfo {
+  font-weight: bolder;
+}
+
+.labelData {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.singleArtPinkLine {
+  margin: 20px 0;
+  padding: 0.1px;
+}
+
+.creatorName {
+  background-color: #e65970;
+  color: #F7F6EC;
+  padding: 1px 6px 4px 6px;
+  border-radius: 3px;
+} 
+
+.normalP {
+  font-weight: 400;
+}
+
+.collectionInfo {
+  margin: 10px 0;
+  font-weight: 300;
+}

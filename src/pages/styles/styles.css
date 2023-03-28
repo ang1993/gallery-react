@@ -17,6 +17,18 @@
     background-color: #13130D;
 }
 
+.CollectionPageBox {
+    height: 100vh;
+}
+
+.SingleAtwkPageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 40px 0 0 0;
+}
+
 .PageHeader {
     padding: 50px 50px 0 50px;
 }
@@ -26,9 +38,6 @@
     border-radius: 15px;
 }
 
-h1 {
-    padding: 20px 0;
-}
 
 .light-text {
     color: #EEEDE0;
@@ -37,7 +46,7 @@ h1 {
 .H1RegularText {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 4.5rem;
 }
 
@@ -72,4 +81,3 @@ h1 {
     width: 370px;
     height: 250px;
 }
-
