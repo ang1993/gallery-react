@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import 'simplebar-react/dist/simplebar.min.css';
 import ArtReducer from '../../store/art/reducer';
+
 
 
 const SingleArtworkComponent = () => {
@@ -34,7 +36,6 @@ const SingleArtworkComponent = () => {
           </div>
         ))}
         {singleArtwork.fun_fact ?  <div><h3>Fun fact:</h3> <p>{singleArtwork.fun_fact}</p></div> : ""}
-        
         </div>
       </div>
     </Container>
