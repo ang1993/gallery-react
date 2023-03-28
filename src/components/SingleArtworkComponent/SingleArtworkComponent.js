@@ -16,6 +16,9 @@ const SingleArtworkComponent = () => {
     <Container>
     <div className='row gx-4'>
     <div className='col-6'>
+      {singleArtwork.images && singleArtwork.images.web ? <img src={singleArtwork.images.web.url} width={"500"} alt={singleArtwork.title}/> : ""}
+      </div>
+      <div className='col-6'>
         <h3>{singleArtwork.title}</h3>
         <p>{singleArtwork.creation_date}</p>
         <p>{singleArtwork.collection}</p>
@@ -30,12 +33,9 @@ const SingleArtworkComponent = () => {
             {artist.biography}
           </div>
         ))}
-        <h3>Fun fact:</h3>
-        {singleArtwork.fun_fact}
+        {singleArtwork.fun_fact ?  <div><h3>Fun fact:</h3> <p>{singleArtwork.fun_fact}</p></div> : ""}
+        
         </div>
-      </div>
-      <div className='col-6'>
-      {singleArtwork.images && singleArtwork.images.web ? <img src={singleArtwork.images.web.url} width={"500"} alt={singleArtwork.title}/> : ""}
       </div>
     </Container>
   )

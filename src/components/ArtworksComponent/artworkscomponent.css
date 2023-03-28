@@ -1,6 +1,19 @@
 .BannerHome {
     width: 100%;
-    height: 60vh;
+    height: 400px;
+}
+
+.VoidBanner {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VoidBanner img {
+  mix-blend-mode: multiply;
+  width: 150px;
 }
 
 .BannerHomeImg {

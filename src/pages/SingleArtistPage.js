@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ArtistComponent from "../components/ArtistComponent/ArtistComponent";
 import { getArtworkSearch } from "../store/art/actions";
 

@@ -14,7 +14,8 @@ const ArtistComponent = () => {
   return(
     <div className='ArtistCompBox'>
     <Container>
-      <h3 className='H3RegularText'>{searchResult[0].name}</h3>
+    <Link className="ScndButton BackButton" to='/browse'> {`<`} Back to Browser</Link>
+      <h3 className='H3RegularText ArtistH3'>{searchResult[0].name}</h3>
       <p className='artistNation'>{searchResult[0].nationality}</p>
       <p className='birthDead'>{searchResult[0].birth_year} - {searchResult[0].death_year} </p>
       {searchResult[0].artworks.map((artwork) => (
