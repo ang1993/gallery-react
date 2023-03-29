@@ -6,7 +6,7 @@
     justify-content: space-between;
 }
 
-.PrimaryButton {
+.PrimaryButton, .PrimaryShrtButton {
     background: #e65970;
 	border: none;
 	border-radius: 7px;
@@ -14,11 +14,8 @@
 	color: #EEEDE0;
 	letter-spacing: .05em;
 	overflow: hidden;
-    font-size:0.9rem;
-	padding: 0.6rem;
     display: flex;
     justify-content: center;
-    width: 200px;
 	position: relative;
 	text-transform: uppercase;
     font-weight: bolder;
@@ -28,13 +25,26 @@
     animation: entrance-opacity 0.9s 1s both;
 }
 
-.PrimaryButton:hover {
+.PrimaryButton {
+    width: 200px;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+}
+
+.PrimaryShrtButton {
+    width: 100px;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+}
+
+.PrimaryButton:hover, .PrimaryShrtButton:hover {
     opacity: 1;
     color: #EEEDE0;
     box-shadow: 0px 0px 10px 0px rgba(161, 161, 161, 0.5);
     transform: translate(0px, -5px);
     
 }
+
 
 .ScndButton {
     color: #e65970;

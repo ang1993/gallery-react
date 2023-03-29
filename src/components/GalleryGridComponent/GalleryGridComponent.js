@@ -27,7 +27,7 @@ const GalleryGridComponent = () => {
     <div className='GalleryGridBox'>
     <Container>
     <SimpleBar
-      style={{maxHeight: 400}}
+      style={{maxHeight: 450}}
       forceVisible = "y"
       autoHide = {false}
       >
