@@ -15,9 +15,11 @@ export default function SingleArtworkPage(){
     }, [])
 
     return (
+        <div className="SingleAtwkPageBox">
         <Container>
             <SingleArtworkComponent></SingleArtworkComponent>
         </Container>
+        </div>
     )
 }
 

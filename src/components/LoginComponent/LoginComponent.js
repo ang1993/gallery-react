@@ -35,7 +35,7 @@ const LoginComponent = () => {
         </fieldset>
         <fieldset>
         <label for="password">Password:</label>
-        <input id="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="password" type="password"></input>
+        <input className='formInput' id="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="password" type="password"></input>
       </fieldset>
       <Link className='PrimaryButton' onClick={submitLogin}>Login</Link>
       </form>

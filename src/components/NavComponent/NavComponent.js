@@ -18,7 +18,7 @@ const NavComponent = () => {
             <Link className='nav-link' to='/about'>About</Link>
           </Nav>
             <Navbar.Brand>
-              <Link className='nav-link' to='/'>ArtCalling</Link>
+              <Link className='nav-link' to='/'>ARTODAY</Link>
             </Navbar.Brand>
             <Nav>
               {user && user.id ? "" : <Link className='nav-link' to="/login">Login</Link>}

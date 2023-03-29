@@ -7,6 +7,7 @@ import "./gallerygrid.css"
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import ArtReducer from '../../store/art/reducer';
+import SimpleBar from 'simplebar-react';
 
 
 const GalleryGridComponent = () => {
@@ -25,6 +26,11 @@ const GalleryGridComponent = () => {
   return(
     <div className='GalleryGridBox'>
     <Container>
+    <SimpleBar
+      style={{maxHeight: 450}}
+      forceVisible = "y"
+      autoHide = {false}
+      >
     <div className='galleryGrid'>
         <div className='galleryRow'>
         <div className='galleryCol'>
@@ -66,6 +72,7 @@ const GalleryGridComponent = () => {
           </div>
       </div>
     </div>
+    </SimpleBar>
     </Container>
     </div>
   )

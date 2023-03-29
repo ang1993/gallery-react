@@ -36,3 +36,8 @@
     padding-bottom: 30px;
     animation: entrance-opacity 0.9s 2s both;
 }
+
+
+.simplebar-scrollbar::before {
+    background-color: #e65970 !important;
+}
