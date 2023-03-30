@@ -32,7 +32,6 @@ const FeaturedArtworks = () => {
       <header className="FeaturedArtworksHeader">
             <h3 className="H3RegularText">What's new?</h3>
             <p className="BiggerP"><LoremIpsum avgWordsPerSentence={8}/></p>
-            <Link className='ScndButton'>Take a look</Link>
       </header>
       <section className='AllCardsBox'>
       {artworks.slice(8,11).map((artwk) => (

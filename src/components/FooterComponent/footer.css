@@ -1,6 +1,5 @@
 .Footer {
     background-color: #13130D;
-    padding: 10px;
     font-size: 12px;
     position: absolute;
     bottom: 0;
@@ -15,7 +14,7 @@
   .FooterContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex;
     flex-wrap: wrap;
   }
   

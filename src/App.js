@@ -23,13 +23,12 @@ function App() {
         <Route exact path='/' element={<HomePage/>}></Route>
         <Route exact path='/about' element={<AboutPage/>}></Route>
         <Route exact path='/collection' element={<CollectionPage/>}></Route>
-        <Route exact path='/browse' element={<BrowsePage/>}></Route>
+        <Route exact path='/browse' element={user && user.id?<BrowsePage/> : <Navigate to="/login" replace></Navigate>}></Route>
         <Route exact path='/login' element={<LoginPage/>}></Route>
         <Route exact path='/user-area' element={user && user.id?<UserAreaPage/> : <Navigate to="/login" replace></Navigate>}></Route>
         <Route exact path='/artwork/:id' element={<SingleArtworkPage/>}></Route>
         <Route exact path='/artist/:name' element={<SingleArtistPage/>}></Route>
       </Routes>
-      <FooterComponent></FooterComponent>
     </div>
   );
 }

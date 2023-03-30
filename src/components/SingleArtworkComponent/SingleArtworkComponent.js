@@ -33,7 +33,7 @@ const SingleArtworkComponent = () => {
     </div>
       <div className='myColArt artworkInfoContainer'>
       <SimpleBar
-        style={{maxHeight: 500}}
+        style={{maxHeight: 400}}
         autoHide = {false}
         >
         <h4>{singleArtwork.title}</h4>

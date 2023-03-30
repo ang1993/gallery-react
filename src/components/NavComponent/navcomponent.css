@@ -5,3 +5,7 @@
 .nav-link {
     color: #EEEDE0 !important;
 }
+
+.nav-link:hover {
+    color: #e65970 !important;
+}

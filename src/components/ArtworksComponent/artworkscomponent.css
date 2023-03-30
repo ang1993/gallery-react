@@ -1,6 +1,10 @@
 .BannerHome {
     width: 100%;
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .VoidBanner {
@@ -18,8 +22,7 @@
 
 .BannerHomeImg {
     width: 100%;
-    position: relative;
-    top: 0px;
+    object-fit: cover;
     animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -28,7 +31,8 @@
 }
 
 .swiper-button-prev:after, .swiper-button-next:after {
-    color: #fff;
+    color: #ffffff6b;
+    font-size: 30px !important;
 }
     
   @keyframes slide-top {

@@ -1,3 +1,5 @@
 .App {
     background-color: #EEEDE0 !important;
+    min-height: 100vh;
+    position: relative;
 }

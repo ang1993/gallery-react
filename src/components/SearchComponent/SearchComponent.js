@@ -4,20 +4,22 @@ import { Button, Card, Container, FormControl, InputGroup } from 'react-bootstra
 import { useDispatch, useSelector } from 'react-redux';
 import { getArtworkSearch } from '../../store/art/actions';
 import ArtReducer from '../../store/art/reducer';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import "./searchcomponent.css";
 import "../../pages/styles/styles.css"
+import FeaturedArtworks from '../FeaturedArtworks/FeaturedArtworks'
+import { useEffect } from 'react';
 
 const SearchComponent = () => {
 
   const dispatch  = useDispatch();
   const [inputValue, setInputValue] = useState("")
   const {searchResult, loadingSearch} = useSelector((state) => state.ArtReducer)
-  
+  const [showImages, setShowImages] = useState(true);
 
   function search(){
+    setShowImages(false)
     dispatch(getArtworkSearch(inputValue))
-    setInputValue("")
   }
 
 
@@ -41,6 +43,9 @@ const SearchComponent = () => {
        />
       <Link className='PrimaryButton' onClick={search}>Browse</Link>
     </div>
+    { showImages && (
+      <FeaturedArtworks></FeaturedArtworks>
+    )}
     <div className='searchResultBox'>
     <div className='searchResultGrid'>
       {searchResult.map(obj => (

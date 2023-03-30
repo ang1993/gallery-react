@@ -21,7 +21,6 @@ const ArtworksComponent = () => {
     dispatch(getArtworks())
   }, [])
 
-//funciona ok:
 
   if(loadingArtworks){
     return (
@@ -44,8 +43,8 @@ const ArtworksComponent = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation, EffectFade]}
         className="mySwiper"
       >
       {artworks.slice(2,6).map((a) => (
