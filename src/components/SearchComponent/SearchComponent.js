@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card, Container, FormControl, InputGroup } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getArtworkSearch } from '../../store/art/actions';
 import ArtReducer from '../../store/art/reducer';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./searchcomponent.css";
 import "../../pages/styles/styles.css"
 import FeaturedArtworks from '../FeaturedArtworks/FeaturedArtworks'
 import { useEffect } from 'react';
+import ArtworksComponent from '../ArtworksComponent/ArtworksComponent';
 
 const SearchComponent = () => {
 
@@ -22,29 +23,23 @@ const SearchComponent = () => {
     dispatch(getArtworkSearch(inputValue))
   }
 
-
-
-  if(searchResult === []) {
-    return (
-      console.log("nothingFound")
-    )
-  } 
-
   return (
     <Container>
-    <div className='SearcherContainer'>
+    <section className='SearcherContainer'>
     <div className='SearcherBox'>
     <label className='searcherLabel'>Search an artist by name: </label>
     <input 
       className='formInput inputSearch'
       placeholder='Ex: Goya'
+      defaultValue=''
       onKeyDown={event => {if(event.key === "Enter"){search()}}}
       onChange = {event => setInputValue(event.target.value)}
        />
       <Link className='PrimaryButton' onClick={search}>Browse</Link>
     </div>
     { showImages && (
-      <FeaturedArtworks></FeaturedArtworks>
+      <div className='BannerSearch'>
+      </div>
     )}
     <div className='searchResultBox'>
     <div className='searchResultGrid'>
@@ -60,7 +55,7 @@ const SearchComponent = () => {
       ))}
       </div>
     </div>
-    </div>
+    </section>
   </Container>
   )
 }

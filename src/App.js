@@ -29,6 +29,7 @@ function App() {
         <Route exact path='/artwork/:id' element={<SingleArtworkPage/>}></Route>
         <Route exact path='/artist/:name' element={<SingleArtistPage/>}></Route>
       </Routes>
+      <FooterComponent></FooterComponent>
     </div>
   );
 }
