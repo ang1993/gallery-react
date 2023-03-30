@@ -29,16 +29,17 @@
     object-fit: cover;
     animation: entrance-opacity 0.9s 0.2s both; 
 }
-
-@keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      opacity: 1;
+  
+  @media (max-width: 767px) {
+    .galleryRow {
+        display: flex;
+        flex-direction: column;
     }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
+
+    .galleryCol {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 5px;
     }
   }
+  

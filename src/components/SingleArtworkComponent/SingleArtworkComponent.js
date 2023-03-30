@@ -23,7 +23,6 @@ const SingleArtworkComponent = () => {
   } 
 
   return (
-    <Container>
     <div className='myRow'>
     <div className='myColArt'>
     <div className='artworkImageContainer'>
@@ -33,7 +32,7 @@ const SingleArtworkComponent = () => {
     </div>
       <div className='myColArt artworkInfoContainer'>
       <SimpleBar
-        style={{maxHeight: 500}}
+        style={{maxHeight: 400}}
         autoHide = {false}
         >
         <h4>{singleArtwork.title}</h4>
@@ -58,7 +57,7 @@ const SingleArtworkComponent = () => {
         </SimpleBar>
         </div>
       </div>
-    </Container>
+    
   )
  }
 SingleArtworkComponent.propTypes = {};

@@ -19,10 +19,10 @@ export default function UserAreaPage(){
         <div className="UserAreaPageBox">
         <Container>
             <div className="myCol">
-            <div className= "welcomeUserHeader">
+            <header className= "welcomeUserHeader">
                 <h4>Nice to see you again, {user.username}!</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in enim nisl. Suspendisse mauris tortor, consectetur ut ipsum a, euismod fermentum velit. Donec quis felis et ligula ornare auctor. </p>
-            </div>
+            </header>
                 <div className="UserLoggedCard">
                 <div className="userImageBox">
                     <img src= {user.image} alt={user.firstName} />

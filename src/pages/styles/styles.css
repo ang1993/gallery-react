@@ -5,17 +5,17 @@
 @import url("../../index.css");
 @import url("../../App.css");
 
-
 .HomePageBox, .BrowsePageBox, .AboutPageBox {
     background-color: #EEEDE0;
 }
 
-.GalleryGridBox, .GalleryPageBox, .FooterComponentBox, .CollectionPageBox {
+.CollectionPageBox {
+    height: 100vh;
     background-color: #13130D;
 }
 
-.CollectionPageBox {
-    height: 100vh;
+.AboutPageBox {
+    padding-bottom: 30px;
 }
 
 .SingleAtwkPageBox {
@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 40px 0 0 0;
+    margin: 30px 0 90px 0;
 }
 
 .PageHeader {
@@ -56,5 +56,21 @@
 
 .italic {
     font-style: italic;
+}
+
+.AboutBox {
+    background-color: #F7F6EC;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+    justify-content: space-between;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.AboutCardInfo {
+    padding: 20px 20px 5px 20px;
 }
 

@@ -28,7 +28,7 @@ const LoginComponent = () => {
     <Container>
       <form>
       <h4>Hi there!</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in enim nisl. Donec quis felis et ligula ornare auctor. </p>
+      <p>You must be logged in to use the search engine. Please enter your access data: </p>
         <fieldset>
           <label for="username">Username:</label>
           <input className='formInput' id="username" value={username} onChange={(e)=> setUserName(e.target.value)} placeholder="username" type="text"></input>

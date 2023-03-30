@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .myColArt {
@@ -21,16 +22,17 @@
 }
 
 .artworkImageContainer img {
-  max-height: 490px;
+  max-height: 450px;
   object-fit: contain;
   animation: entrance-opacity 0.9s 0.6s both;
 }
 
 .artworkInfoContainer {
   background-color: #F7F6EC;
-  box-shadow: 1px 2px 17px 0px rgba(168,168,168,0.2);
+  box-shadow: 1px 2px 17px 0px rgba(168,168,168,0.4);
   padding: 40px;
   border-radius: 8px;
+  max-height: 450px;
 }
 
 .labelInfo {
@@ -61,4 +63,23 @@
 .collectionInfo {
   margin: 10px 0;
   font-weight: 300;
+}
+
+
+@media (min-width: 768px) {
+  .myRow {
+    flex-direction: row;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .myRow {
+    flex-direction: column;
+  }
+
+  .myColArt {
+    width: 90%;
+    margin: 20px;
+  }
 }

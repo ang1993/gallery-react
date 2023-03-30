@@ -1,8 +1,10 @@
 .UserAreaPageBox, .LoginAreaPageBox {
-    height: 92vh;
     display: flex;
-    flex-direction: row;
-    padding: 7rem 14rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0 14rem;
+    height: 93vh;
 }
 
 .UserAreaPageBox {
@@ -15,6 +17,8 @@
 }
 
 .LoginAreaPageBox {
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(to right, #EEEDE0, #EEEDE0), url("https://images.unsplash.com/photo-1578301978069-45264734cddc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=412&q=80");
     background-blend-mode: multiply;
     background-position: right;
@@ -67,3 +71,16 @@
 .userInfoBox-userName {
     font-weight: bolder;
 }
+
+@media (max-width: 1200px) {
+    .UserAreaPageBox, .LoginAreaPageBox  {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        background: none;
+    }
+
+    .myCol {
+        width: 100%;
+    }
+  }
