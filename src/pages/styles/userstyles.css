@@ -1,86 +1,89 @@
-.UserAreaPageBox, .LoginAreaPageBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding: 0 14rem;
-    height: 93vh;
+.UserAreaPageBox,
+.LoginAreaPageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0 14rem;
+  height: 93vh;
 }
 
 .UserAreaPageBox {
-    background-image: linear-gradient(to right, #EEEDE0, #EEEDE0), url("https://images.unsplash.com/photo-1575995872537-3793d29d972c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=424&q=80");
-    background-blend-mode: multiply;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size:550px;
-    animation: entrance-opacity 0.9s 0.2s both; 
+  background-image: linear-gradient(to right, #eeede0, #eeede0),
+    url("https://images.unsplash.com/photo-1575995872537-3793d29d972c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=424&q=80");
+  background-blend-mode: multiply;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 550px;
+  animation: entrance-opacity 0.9s 0.2s both;
+  margin-bottom: 40px;
 }
 
 .LoginAreaPageBox {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right, #EEEDE0, #EEEDE0), url("https://images.unsplash.com/photo-1578301978069-45264734cddc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=412&q=80");
-    background-blend-mode: multiply;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size:550px; 
-    animation: entrance-opacity 0.9s 0.2s both; 
+  background-image: linear-gradient(to right, #eeede0, #eeede0),
+    url("https://images.unsplash.com/photo-1578301978069-45264734cddc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=412&q=80");
+  background-blend-mode: multiply;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 550px;
+  animation: entrance-opacity 0.9s 0.2s both;
+  margin-bottom: 40px;
 }
 
-
 .userImageBox {
-    box-shadow: inset 1px 2px 17px 0px rgba(168,168,168,0.5);
-    border-radius: 50%;
+  box-shadow: inset 1px 2px 17px 0px rgba(168, 168, 168, 0.5);
+  border-radius: 50%;
 }
 
 .userImageBox img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .myCol {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: left;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: left;
+  justify-content: space-around;
 }
 
 .welcomeUserHeader {
-    animation: entrance-opacity 0.9s 0.4s both;
+  animation: entrance-opacity 0.9s 0.4s both;
 }
 
 .UserLoggedCard {
-    width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    margin: 15px 0 20px 0;
-    border-radius: 8px;
-    background-color: #F7F6EC;
-    box-shadow: 1px 2px 17px 0px rgba(168,168,168,0.2);
-    animation: slide-in-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s both;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin: 15px 0 20px 0;
+  border-radius: 8px;
+  background-color: #f7f6ec;
+  box-shadow: 1px 2px 17px 0px rgba(168, 168, 168, 0.2);
+  animation: slide-in-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
 
 .UserLoggedCard p {
-    margin: 0;
+  margin: 0;
 }
 
 .userInfoBox-userName {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 @media (max-width: 1200px) {
-    .UserAreaPageBox, .LoginAreaPageBox  {
-        display: flex;
-        flex-direction: column;
-        padding: 0 30px;
-        background: none;
-    }
-
-    .myCol {
-        width: 100%;
-    }
+  .UserAreaPageBox,
+  .LoginAreaPageBox {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    background: none;
   }
+
+  .myCol {
+    width: 100%;
+  }
+}

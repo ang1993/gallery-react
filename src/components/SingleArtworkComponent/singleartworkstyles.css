@@ -28,8 +28,8 @@
 }
 
 .artworkInfoContainer {
-  background-color: #F7F6EC;
-  box-shadow: 1px 2px 17px 0px rgba(168,168,168,0.4);
+  background-color: #f7f6ec;
+  box-shadow: 1px 2px 17px 0px rgba(168, 168, 168, 0.4);
   padding: 40px;
   border-radius: 8px;
   max-height: 450px;
@@ -51,10 +51,10 @@
 
 .creatorName {
   background-color: #e65970;
-  color: #F7F6EC;
+  color: #f7f6ec;
   padding: 1px 6px 4px 6px;
   border-radius: 3px;
-} 
+}
 
 .normalP {
   font-weight: 400;
@@ -65,13 +65,11 @@
   font-weight: 300;
 }
 
-
 @media (min-width: 768px) {
   .myRow {
     flex-direction: row;
   }
 }
-
 
 @media (max-width: 767px) {
   .myRow {

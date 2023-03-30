@@ -127,7 +127,7 @@ export function getArtworkSearch(searchParam){
     }
 }   
 
-//GET ARTWORKS:
+//GET F ARTWORKS:
 
 export function actionGetFemaleArtworks(){
     return {

@@ -1,49 +1,49 @@
 .FeaturedArtworksBox {
-    background-color: #F7F6EC;
-    border-radius: 10px;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
+  background-color: #f7f6ec;
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
-.FeaturedArtworksHeader{
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px 30px 20px;
+.FeaturedArtworksHeader {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 30px 20px;
 }
 
 .AllCardsBox {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .CardBox {
-    background-color: red;
-    max-width: 370px;
-    box-sizing: content-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 8px;
-    background-color: #F7F6EC;
-    box-shadow: 1px 2px 17px 0px rgba(168,168,168,0.3);
-    animation: slide-in-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s both;
+  background-color: red;
+  max-width: 370px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: #f7f6ec;
+  box-shadow: 1px 2px 17px 0px rgba(168, 168, 168, 0.3);
+  animation: slide-in-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
 
 .CardImage {
-    object-fit: cover;
-    width: 370px;
-    height: 250px;
-    border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  width: 370px;
+  height: 250px;
+  border-radius: 8px 8px 0 0;
 }
 
 .CardTitle {
-    height: 50px;
+  height: 50px;
 }
 
 .CardInfo {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 5px 20px;
 }

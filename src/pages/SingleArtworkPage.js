@@ -5,21 +5,19 @@ import { useParams } from "react-router-dom";
 import SingleArtworkComponent from "../components/SingleArtworkComponent/SingleArtworkComponent";
 import { getSingleArtwork } from "../store/art/actions";
 
-export default function SingleArtworkPage(){
+export default function SingleArtworkPage() {
+  const param = useParams();
+  const dispatch = useDispatch();
 
-    const param = useParams();
-    const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getSingleArtwork(param.id));
+  }, [dispatch, param.id]);
 
-    useEffect(() => {
-        dispatch(getSingleArtwork(param.id))
-    }, [])
-
-    return (
-        <div className="SingleAtwkPageBox">
-        <Container>
-            <SingleArtworkComponent></SingleArtworkComponent>
-        </Container>
-        </div>
-    )
+  return (
+    <div className="SingleAtwkPageBox">
+      <Container>
+        <SingleArtworkComponent></SingleArtworkComponent>
+      </Container>
+    </div>
+  );
 }
-

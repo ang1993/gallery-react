@@ -3,8 +3,8 @@ import ArtReducer from "./art/reducer";
 import UserReducer from "./auth/reducer";
 
 const rootReducer = combineReducers({
-    ArtReducer,
-    UserReducer
-})
+  ArtReducer,
+  UserReducer,
+});
 
-export default rootReducer
+export default rootReducer;
