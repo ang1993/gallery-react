@@ -2,6 +2,7 @@
     background-color: #13130D;
     font-size: 12px;
     position: absolute;
+    padding: 25px 0 0 0;
     bottom: 0;
     width: 100%;
     color: #EEEDE0;
@@ -46,11 +47,11 @@
     color: #EEEDE0;
   }
 
-  .icons a:hover {
+  .Icons a:hover {
     color: #e65970;
   }
   
-  .icons a:last-child {
+  .Icons a:last-child {
     margin-right: 0;
   }
   
