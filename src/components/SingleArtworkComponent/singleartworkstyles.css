@@ -64,3 +64,22 @@
   margin: 10px 0;
   font-weight: 300;
 }
+
+
+@media (min-width: 768px) {
+  .myRow {
+    flex-direction: row;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .myRow {
+    flex-direction: column;
+  }
+
+  .myColArt {
+    width: 90%;
+    margin: 20px;
+  }
+}

@@ -18,29 +18,29 @@
     flex-wrap: wrap;
   }
   
-  .social-media {
+  .SocialMedia {
     flex-basis: 33%;
     text-align: center;
   }
   
-  .contact-info {
+  .ContactInfo {
     flex-basis: 33%;
     text-align: center;
   }
   
-  .legal {
+  .Legal {
     flex-basis: 33%;
     text-align: center;
   }
   
-  .icons {
+  .Icons {
     display: flex;
     align-items: center;
     justify-content: center;
     
   }
   
-  .icons a {
+  .Icons a {
     font-size: 16px;
     margin-right: 10px;
     color: #EEEDE0;
