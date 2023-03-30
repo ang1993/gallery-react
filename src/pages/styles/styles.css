@@ -1,0 +1,81 @@
+@import url("./userstyles.css");
+@import url("./formstyles.css");
+@import url("./animations.css");
+@import url("./buttons.css");
+@import url("../../index.css");
+@import url("../../App.css");
+
+.HomePageBox,
+.BrowsePageBox,
+.AboutPageBox {
+  background-color: #eeede0;
+}
+
+.CollectionPageBox {
+  height: 100vh;
+  background-color: #13130d;
+}
+
+.AboutPageBox {
+  padding-bottom: 90px
+}
+
+.BrowsePageBox {
+  padding-bottom: 30px;
+}
+
+.SingleAtwkPageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 30px 0 120px 0;
+}
+
+.PageHeader {
+  padding: 50px 50px 0 50px;
+}
+
+.light-text {
+  color: #eeede0;
+}
+
+.H1RegularText {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+
+.H1ItalicText {
+  font-style: italic;
+}
+
+.BiggerP {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+.H3RegularText {
+  margin-bottom: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.AboutBox {
+  background-color: #f7f6ec;
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0;
+  justify-content: space-between;
+  row-gap: 40px;
+  flex-wrap: wrap;
+}
+
+.AboutCardInfo {
+  padding: 20px 20px 5px 20px;
+}

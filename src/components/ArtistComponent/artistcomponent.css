@@ -1,0 +1,42 @@
+.ArtistCompBox {
+  padding: 50px 50px 70px 50px;
+  animation: entrance-opacity 0.9s 0.3s both;
+}
+
+.ArtworkPreviewBox {
+  padding: 20px 0;
+  border-top: 1px solid black;
+  animation: entrance-opacity 0.9s 0.7s both;
+}
+
+.ArtistH3 {
+  margin-top: 20px;
+}
+
+.ArtworkTitleList {
+  padding: 10px 0 0 0;
+}
+
+.ArtworkTombstoneList {
+  margin-bottom: 0;
+  padding: 0 0 10px 0;
+  font-style: italic;
+}
+
+.birthDead {
+  margin-bottom: 20px;
+  animation: entrance-opacity 0.9s 0.3s both;
+}
+
+.artistNation {
+  margin-bottom: 10px;
+}
+
+.BackButton {
+  padding-bottom: 30px;
+  animation: entrance-opacity 0.9s 2s both;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #e65970 !important;
+}

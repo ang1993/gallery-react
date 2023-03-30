@@ -11,7 +11,11 @@ import {
 
     GET_SEARCH,
     GET_SEARCH_OK,
-    GET_SEARCH_FAIL
+    GET_SEARCH_FAIL,
+
+    GET_FEMALE_ARTWORK,
+    GET_FEMALE_ARTWORK_OK,
+    GET_FEMALE_ARTWORK_FAIL
 
 } from './actionTypes'
 
@@ -43,7 +47,7 @@ export function getArtworks(){
     return async(dispatch) => {
         dispatch(actionGetArtworks())
         try {
-            const res = await axios.get(`${apiUrl}/?q=&limit=6`)
+            const res = await axios.get(`${apiUrl}/?q=&limit=100`)
             dispatch(actionGetArtworksOk(res.data.data))
         } catch (error) {
             dispatch(actionGetArtworksFail(error))
@@ -115,10 +119,44 @@ export function getArtworkSearch(searchParam){
     return async(dispatch) => {
         dispatch(actionGetArtworkSearch(searchParam))
         try {
-            const res = await axios.get(`${apiUrl}/?q=${searchParam}=2&limit=10&indent=1`)
+            const res = await axios.get(`https://openaccess-api.clevelandart.org/api/creators/?name=${searchParam}`)
             dispatch(actionGetArtworkSearchOk(res.data.data))
         } catch (error) {
             dispatch(actionGetArtworkSearchFail(error))
+        }
+    }
+}   
+
+//GET F ARTWORKS:
+
+export function actionGetFemaleArtworks(){
+    return {
+        type: GET_FEMALE_ARTWORK
+    }
+}
+
+export function actionGetFemaleArtworksOk(femArtworks){
+    return {
+        type: GET_FEMALE_ARTWORK_OK,
+        payload: femArtworks
+    }
+}
+
+export function actionGetFemaleArtworksFail(error){
+    return {
+        type: GET_FEMALE_ARTWORK_FAIL,
+        payload: error
+    }
+}
+
+export function getFemaleArtworks(){
+    return async(dispatch) => {
+        dispatch(actionGetFemaleArtworks())
+        try {
+            const res = await axios.get(`https://openaccess-api.clevelandart.org/api/artworks/?female_artists&recently_acquired&created_before_age=25`)
+            dispatch(actionGetFemaleArtworksOk(res.data.data))
+        } catch (error) {
+            dispatch(actionGetFemaleArtworksFail(error))
         }
     }
 }

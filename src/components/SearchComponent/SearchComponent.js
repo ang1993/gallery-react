@@ -1,58 +1,62 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Button, Card, Container, FormControl, InputGroup } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { getArtworkSearch } from '../../store/art/actions';
-import ArtReducer from '../../store/art/reducer';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { getArtworkSearch } from "../../store/art/actions";
+import { Link } from "react-router-dom";
 import "./searchcomponent.css";
-
+import "../../pages/styles/styles.css";
 
 const SearchComponent = () => {
+  const dispatch = useDispatch();
+  const [inputValue, setInputValue] = useState("");
+  const { searchResult } = useSelector((state) => state.ArtReducer);
+  const [showImages, setShowImages] = useState(true);
 
-  const dispatch  = useDispatch();
-  const [inputValue, setInputValue] = useState("")
-  const {searchResult} = useSelector((state) => state.ArtReducer)
-
-  function search(){
-    dispatch(getArtworkSearch(inputValue))
-    setInputValue("")
+  function search() {
+    setShowImages(false);
+    dispatch(getArtworkSearch(inputValue));
   }
 
   return (
     <Container>
-    <div className='row gx-5'>
-    <div className='col-4 px-4'>
-    <InputGroup className='mb-3' size='m'>
-      <FormControl
-      placeholder='Search for Artist'
-      type='input'
-      onKeyDown={event => {if(event.key === "Enter"){search()}}}
-      onChange = {event => setInputValue(event.target.value)}
-       />
-      <Button onClick={search}>Search</Button>
-    </InputGroup>
-    </div>
-    <div className='col-8 px-4'>
-    <div className='row g-5'>
-      {searchResult.map((obj) => (
-        <Card className='col-4' key={obj.id}>
-        <Link to={`/artwork/${obj.id}`}>
-        <Card.Title>{obj.title}</Card.Title>
-        {/* PROBLEMA AL LEER URL: */}
-        {/* <img src={obj.images.web.url} width={200} alt={obj.title} /> */}
-        </Link>
-        </Card>
-      ))}
-      </div>
-    </div>
-    </div>
-  </Container>
-  )
-}
-
-SearchComponent.propTypes = {};
-
-SearchComponent.defaultProps = {};
+      <section className="SearcherContainer">
+        <div className="SearcherBox">
+          <label className="searcherLabel">Search an artist by name: </label>
+          <input
+            className="formInput inputSearch"
+            placeholder="Ex: Goya"
+            defaultValue=""
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                search();
+              }
+            }}
+            onChange={(event) => setInputValue(event.target.value)}
+          />
+          <Link className="PrimaryButton" onClick={search}>
+            Browse
+          </Link>
+        </div>
+        {showImages && <div className="BannerSearch"></div>}
+        <div className="searchResultBox">
+          <div className="searchResultGrid">
+            {searchResult.map((obj) => (
+              <Link className="cardArtistLink" to={`/artist/${obj.name}`}>
+                <div className="searcher-card" key={obj.id}>
+                  <h5 className="artistName">{obj.name}</h5>
+                  <div className="pinkLine"></div>
+                  <p className="searcherCountry">{obj.nationality}</p>
+                  <p className="birthDeath">
+                    {obj.birth_year} - {obj.death_year}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Container>
+  );
+};
 
 export default SearchComponent;

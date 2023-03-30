@@ -1,0 +1,44 @@
+.GalleryH3 {
+  color: #eeede0;
+}
+
+.whiteP {
+  color: #eeede0;
+}
+
+.galleryGridBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galleryRow {
+  display: flex;
+  justify-self: center;
+  padding: 5px;
+}
+
+.galleryCol {
+  flex: 30%;
+  max-width: 20%;
+  padding: 0 5px;
+}
+
+.galleryImage {
+  width: 100%;
+  object-fit: cover;
+  animation: entrance-opacity 0.9s 0.2s both;
+}
+
+@media (max-width: 767px) {
+  .galleryRow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .galleryCol {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 5px;
+  }
+}
