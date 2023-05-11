@@ -19,13 +19,11 @@ export default function HomePage() {
             </div>
             <div class="col-md-6 flex align-self-center">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus ultricies enim nec quam dignissim, eu ultrices dolor
-                varius. Pellentesque eu scelerisque mauris. Nullam posuere magna
-                quis mauris aliquam, a semper ex tincidunt. Pellentesque
-                habitant morbi tristique senectus et netus et malesuada fames ac
-                turpis egestas. Pellentesque habitant morbi tristique senectus
-                et netus et malesuada fames ac turpis egestas.
+                Browse artists, embark on your art journey Discover a world of
+                creativity and inspiration. Find your favorite artists, explore
+                their captivating artwork, and delve into the depths of artistic
+                expression. Start browsing now to uncover hidden gems and
+                unearth new masterpieces. 
               </p>
               <Link to={"/browse"} className="PrimaryButton">
                 Start browsing

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
-import { LoremIpsum } from "react-lorem-ipsum";
 import { useDispatch, useSelector } from "react-redux";
 import { getArtworks } from "../../store/art/actions";
 import "../../pages/styles/styles.css";
@@ -34,7 +33,11 @@ const FeaturedArtworks = () => {
         <header className="FeaturedArtworksHeader">
           <h3 className="H3RegularText">What's new?</h3>
           <p className="BiggerP">
-            <LoremIpsum avgWordsPerSentence={8} />
+            Discover the latest additions to our ever-growing collection of
+            artwork. Our curated selection showcases the most captivating and
+            innovative pieces from talented artists around the world. Immerse
+            yourself in a world of artistic inspiration and stay up-to-date with
+            the latest trends in the art scene.
           </p>
         </header>
         <section className="AllCardsBox">
