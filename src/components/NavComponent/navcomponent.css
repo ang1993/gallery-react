@@ -1,5 +1,23 @@
 .NavBarBox {
   background-color: #13130d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+
+.NavBarBox nav {
+  display: flex;
+  gap: 50px;
+}
+
+.globalNav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px
 }
 
 .nav-link {
@@ -13,4 +31,10 @@
 .MainLogo {
   max-width: 110px;
   margin-right: 100px;
+  cursor: pointer;
+}
+
+.on-cercle {
+  font-size: 9px;
+  color: #67e1af;
 }

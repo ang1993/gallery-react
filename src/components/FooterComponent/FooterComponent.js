@@ -8,19 +8,14 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import "./footer.css";
+import logo from "../../assets/artBLogo.png";
+import { Link } from "react-router-dom";
 
 const FooterComponent = () => (
-  <div className="FooterComponentBox">
     <footer className="Footer">
-      <div className="FooterContainer">
         <div className="ContactInfo">
-          <p>hello@artbrowser.com</p>
-        </div>
-        <div className="Legal">
-          <p>© 2023 - Artbrowser</p>
-        </div>
-        <div className="SocialMedia">
-          <div className="Icons">
+          <Link to="/"><img src={logo} className="FooterLogo" alt="artbrowser" /></Link>
+          <div className="SocialMedia">
             <a
               href="https://www.facebook.com/"
               target="_blank"
@@ -64,10 +59,13 @@ const FooterComponent = () => (
               <FaSlideshare />
             </a>
           </div>
+          <div>
+            <p>© 2023 - Artbrowser</p>
+            <p>hello@artbrowser.com</p>
+          </div>
         </div>
-      </div>
+        
     </footer>
-  </div>
 );
 
 FooterComponent.propTypes = {};

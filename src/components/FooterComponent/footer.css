@@ -1,58 +1,45 @@
 .Footer {
   background-color: #13130d;
   font-size: 12px;
-  position: absolute;
-  padding: 25px 0;
+
+  align-items: center;
+  padding: 2rem 6rem;
   bottom: 0;
   width: 100%;
   color: #eeede0;
-}
-
-.Footer p {
-  margin: 0;
-}
-
-.FooterContainer {
   display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  align-items: flex;
-  flex-wrap: wrap;
-}
-
-.SocialMedia {
-  flex-basis: 33%;
-  text-align: center;
+  justify-content: left;
 }
 
 .ContactInfo {
-  flex-basis: 33%;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.Legal {
-  flex-basis: 33%;
-  text-align: center;
+.FooterLogo {
+  max-width: 110px;
+  margin-right: 100px;
+  cursor: pointer;
 }
 
-.Icons {
+.SocialMedia {
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
-.Icons a {
+
+.SocialMedia a {
   font-size: 16px;
   margin-right: 10px;
   color: #eeede0;
 }
 
-.Icons a:hover {
+.SocialMedia a:hover {
   color: #e65970;
-}
-
-.Icons a:last-child {
-  margin-right: 0;
 }
 
 h3 {
